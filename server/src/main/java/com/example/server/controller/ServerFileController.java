@@ -34,7 +34,7 @@ import java.util.UUID;
 public class ServerFileController {
 
     //本地存储目录
-    private String LocationPath = "D:\\ContractLock\\";
+    private String LocationPath = "D:\\data\\";
 
     @Autowired
     private FileServer fileServer;
@@ -43,15 +43,13 @@ public class ServerFileController {
     @PostMapping("/upload")
     public R ReceiveFile(HttpServletRequest req) throws Exception {
 
-        //创建文件uuid
+        //生成文件uuid
         String uuid = UUID.randomUUID().toString();
         //获得新文件名 uuid+.+文件类型
-        Date date=new Date();
+        Date date = new Date();
         DateFormat format=new SimpleDateFormat("yyyyMMdd");
         String time = format.format(date);
-        System.out.println("time: "+time);
         String filetype = req.getHeader("filetype");
-        System.out.println("filetype: "+filetype);
         String newdirectory = LocationPath+time;
         String newFilename = newdirectory+"\\"+uuid+"."+filetype;
         //判断上层目录是否存在

@@ -17,7 +17,7 @@ import java.util.Date;
  */
 @Data
 @AllArgsConstructor
-@TableName(value = "lockfile")
+@TableName(value = "skyfile")
 public class SkyFile {
 
     @TableId(value = "fileid",type = IdType.AUTO)
