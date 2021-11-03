@@ -1,6 +1,12 @@
 # fileserver
 文件服务器
 
+- 项目主体为Maven构建，共有Server端、Client端两个模块。
+
+- Server端采用Springboot搭建后台服务，提供后台服务接口。
+
+- Client端采用Maven构建，分别对Server端的上传（upload）、下载（down）、文件元（fileinfo）进行单元测试。采用HttpURLConnection对服务器进行模拟访问，以此减少对第三方库的依赖
+
 ## 技术栈
 - Spring Boot
 - MySQL
