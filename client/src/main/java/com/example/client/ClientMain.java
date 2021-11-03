@@ -1,7 +1,7 @@
 package com.example.client;
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.client.controller.ClientFileController;
+import com.example.client.base.ClientFileBase;
 import com.example.client.util.Choosepath;
 
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 public class ClientMain {
     public static void main(String[] args) throws IOException {
-        ClientFileController fileController = new ClientFileController();
+        ClientFileBase fileController = new ClientFileBase();
         //测试上传文件
         String upFilePath = Choosepath.choosefile(1);
         String s = fileController.UploadFile(upFilePath);

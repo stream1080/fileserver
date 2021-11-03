@@ -1,4 +1,4 @@
-package com.example.client.controller;
+package com.example.client.base;
 
 import com.example.client.util.ConnectionUtil;
 import com.example.client.util.StreamUtil;
@@ -22,7 +22,7 @@ import java.util.Date;
  * @since 2021/11/3 23:06
  */
 
-public class ClientFileController {
+public class ClientFileBase {
     //服务器器接口访问地址
     private String ServerAddress = "http://127.0.0.1:8080/api/file/";
 
